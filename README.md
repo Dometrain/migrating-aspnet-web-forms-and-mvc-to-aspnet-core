@@ -71,7 +71,3 @@ To run the code samples successfully, you will need to restore the database from
 This course is designed to make the migration process clear and manageable. Whether you are moving a small MVC app or a large Web Forms application, this course will provide you with all the tools and techniques you need to complete the migration successfully.
 
 Happy coding, and I hope you enjoy the course!
-
----
-
-*This course is presented by [Jonathan "J." Tower](https://www.trailhead.tech).*
