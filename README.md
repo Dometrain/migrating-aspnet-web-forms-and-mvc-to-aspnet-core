@@ -4,7 +4,7 @@ Welcome to the repository for the **Migrating ASP.NET Web Forms and MVC to ASP.N
 
 ## About Me
 
-Hello! My name is **Jonathan "J." Tower**, and I’m an eleven-time Microsoft MVP award recipient in .NET and a Founding Partner at **Trailhead Technology Partners**. Over the years, I’ve helped countless teams modernize their legacy applications, moving them from older technologies to the latest and greatest that .NET has to offer. I started developing web applications even before .NET Framework existed, so I’ve had the privilege of watching the web development landscape evolve dramatically, from classic ASP to Web Forms, MVC, Razor Pages, and beyond.
+Hello! My name is [**Jonathan "J." Tower**](http://linkedin.com/in/jtower), and I’m an eleven-time Microsoft MVP award recipient in .NET and a Founding Partner at [**Trailhead Technology Partners**](https://trailheadtechnology.com/). Over the years, I’ve helped countless teams modernize their legacy applications, moving them from older technologies to the latest and greatest that .NET has to offer. I started developing web applications even before .NET Framework existed, so I’ve had the privilege of watching the web development landscape evolve dramatically, from classic ASP to Web Forms, MVC, Razor Pages, and beyond.
 
 I’ve worked with many teams to migrate legacy applications, and now I’m excited to share my knowledge and experience with you. In this course, we’ll explore how to successfully migrate your ASP.NET Web Forms and MVC applications to ASP.NET Core.
 
@@ -58,27 +58,12 @@ To run the code samples successfully, you will need to restore the database from
    - Choose the `.bak` file in the `data` folder.
    - Follow the prompts to restore the database.
 
-### Folder Structure
-
-- **Module1**: Introduction, Overview, and Prerequisites
-- **Module2**: Migration Fundamentals
-- **Module3**: ASP.NET Core Architecture
-- **Module4**: Using .NET Upgrade Assistant
-- **Module5**: Class Library Upgrades
-- **Module6**: EF Modernization Strategy
-- **Module7**: Migrating MVC to ASP.NET Core
-- **Module8**: Migrating Web Forms to ASP.NET Core
-- **Module9**: Advanced Topics and System.Web Adapters
-- **Module10**: Migrating Other Components
-- **Module11**: Future Modernization Paths
-- **Module12**: Conclusion
-
 ## Getting Started
 
 1. Clone this repository to your local machine.
 2. Set up your local development environment:
    - **Visual Studio** (for C#/.NET development)
-   - **SQL Server** (with a restored database from the `.bak` file)
+   - **SQL Server** (with a restored database from the `.bak` file in the data directory)
 3. Explore each module folder for code examples and exercises.
 
 ## Conclusion
