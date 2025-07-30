@@ -16,7 +16,7 @@ This course focuses on migrating web applications built with ASP.NET Web Forms a
 - How to modernize architecture, using features like Dependency Injection, Middleware, and more
 - Migrating data access code (EF6 to EF Core, Dapper, ADO.NET)
 - Step-by-step guidance on moving Web Forms and MVC to Razor Pages and MVC in ASP.NET Core
-- Integrating modern and legacy systems during the migration process
+- Integrating modern and legacy systems during the migration process using YARP (Yet Another Reverse Proxy) for seamless communication between the old and new parts of your application
 
 ### Key Topics:
 - **Module 1**: Course Overview & Prerequisites
