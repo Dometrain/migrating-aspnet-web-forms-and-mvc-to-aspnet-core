@@ -1,0 +1,104 @@
+@using Microsoft.AspNetCore.SystemWebAdapters
+@* Adapted from ShopUI's Site.Master for Razor Pages. 
+   ASP.NET Web Forms controls and some logic are commented out or omitted. *@
+@inject WingtipToys.Data.ProductContext db
+@{
+    var cartId = Context.AsSystemWeb().Session["CartId"] as string;
+    var cartCount = (from cartItems in db.ShoppingCartItems
+                    where cartItems.CartId == cartId
+                    select (int?)cartItems.Quantity).Sum() ?? 0;
+    var categories = db.Categories.ToList();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Wingtip Toys</title>
+    <script src="/Scripts/modernizr-2.6.2.js"></script>
+    <link rel="stylesheet" href="/Content/bootstrap.css" />
+    <link rel="stylesheet" href="/Content/site.css" />
+    @* Bundling and Modernizr scripts would be handled differently in ASP.NET Core. *@
+    @* <environment include="Development">
+        <script src="~/lib/modernizr/modernizr.js"></script>
+    </environment> *@
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    @* Add Bootstrap or other CSS as needed *@
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-page="/">Wingtip Toys</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @* Admin link visibility logic would require custom authorization checks *@
+                    @* <li><a asp-page="/Admin/AdminPage">Admin</a></li> *@
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/About">About</a></li>
+                    <li><a href="/Contact">Contact</a></li>
+                    <li><a href="/ProductList">Products</a></li>
+                    <li><a href="/ShoppingCart">Cart (@cartCount)</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @* Razor Pages authentication UI would go here. Example: *@
+                    @if (User.Identity?.IsAuthenticated ?? false)
+                    {
+                        <li>
+                            <a asp-page="/Account/Manage" title="Manage your account">
+                                Hello, @User.Identity.Name!
+                            </a>
+                        </li>
+                        <li>
+                            <form method="post" asp-page="/Account/Logout" asp-antiforgery="true" style="display:inline">
+                                <button type="submit" class="btn btn-link navbar-btn">Log off</button>
+                            </form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li><a href="/Account/Register">Register</a></li>
+                        <li><a href="/Account/Login">Log in</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="TitleContent" style="text-align: center">
+        <a asp-page="/Index">
+            <img src="~/images/logo.jpg" style="border-style:none;" alt="Wingtip Toys Logo" />
+        </a>
+        <br />
+    </div>
+    <div id="CategoryMenu" style="text-align: center">
+        @foreach (var category in categories)
+        {
+            <b style="font-size: large; font-style: normal">
+                <a href="/Category/@category.CategoryName">@category.CategoryName</a>
+            </b>
+            @if (category != categories.Last())
+            {
+                <span> | </span>
+            }
+        }
+
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Wingtip Toys</p>
+            <div>Modern</div>
+            @Context.AsSystemWeb().Session["CartId"]
+        </footer>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

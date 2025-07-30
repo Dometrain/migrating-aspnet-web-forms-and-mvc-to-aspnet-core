@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Incremental Migration",
+    "Projects": [
+      {
+        "Path": "WingtipToys.AdminUI\\WingtipToys.AdminUI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "WingtipToys.AdminUI.Core\\WingtipToys.AdminUI.Core.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

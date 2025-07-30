@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Wingtip Toys</title>
+    @* Bundling and Modernizr scripts would be handled differently in ASP.NET Core. *@
+    @* <environment include="Development">
+        <script src="~/lib/modernizr/modernizr.js"></script>
+    </environment> *@
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="~/Content/css" />
+    @* Add Bootstrap or other CSS as needed *@
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-page="/">Wingtip Toys</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @* Admin link visibility logic would require custom authorization checks *@
+                    @* <li><a asp-page="/Admin/AdminPage">Admin</a></li> *@
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/About">About</a></li>
+                    <li><a href="/Contact">Contact</a></li>
+                    <li><a href="/ProductList">Products</a></li>
+                    <li><a href="/ShoppingCart">&nbsp;</a></li>
+                @* Cart count and dynamic cart link would require additional logic *@
+                @* <li><a asp-page="/ShoppingCart" id="cartCount">&nbsp;</li> *@
+                </ul>
+                @* Authentication UI would require ASP.NET Core Identity scaffolding *@
+                @* <partial name="_LoginPartial" /> *@
+            </div>
+        </div>
+    </nav>
+    <div id="TitleContent" style="text-align: center">
+        <a asp-page="/Index">
+            <img src="~/images/logo.jpg" style="border-style:none;" alt="Wingtip Toys Logo" />
+        </a>
+        <br />
+    </div>
+    <div id="CategoryMenu" style="text-align: center">
+        @* Category menu would require a view component or partial with model binding *@
+        @* Example placeholder: *@
+        @* @await Component.InvokeAsync("CategoryMenu") *@
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Wingtip Toys</p>
+            @* Cart ID and mobile label would require additional logic *@
+            @* <span id="lblCartId"></span> *@
+            @* <div><span id="lblMobile"></span></div> *@
+            <div>Modern</div>
+        </footer>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

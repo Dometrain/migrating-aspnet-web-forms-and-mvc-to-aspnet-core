@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.ShopUI", "WingtipToys.ShopUI\WingtipToys.ShopUI.csproj", "{3EAF67CC-D5D2-4624-8347-2545C9EA4AE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.AdminUI", "WingtipToys.AdminUI\WingtipToys.AdminUI.csproj", "{13833ADB-D6CA-4D42-9AB3-E15DCB7EF7F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Data", "WingtipToys.Data\WingtipToys.Data.csproj", "{FF01A182-B6F9-4A44-B05C-43527FAFD42E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Identity", "WingtipToys.Identity\WingtipToys.Identity.csproj", "{F6C13961-8395-48DB-A72E-D82FF9C52CE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WingtipToys.Common", "WingtipToys.Common\WingtipToys.Common.csproj", "{93DF0DAA-8CC1-4CA4-9EB3-7DAF4B916788}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EAF67CC-D5D2-4624-8347-2545C9EA4AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAF67CC-D5D2-4624-8347-2545C9EA4AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAF67CC-D5D2-4624-8347-2545C9EA4AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAF67CC-D5D2-4624-8347-2545C9EA4AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13833ADB-D6CA-4D42-9AB3-E15DCB7EF7F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13833ADB-D6CA-4D42-9AB3-E15DCB7EF7F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13833ADB-D6CA-4D42-9AB3-E15DCB7EF7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13833ADB-D6CA-4D42-9AB3-E15DCB7EF7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF01A182-B6F9-4A44-B05C-43527FAFD42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF01A182-B6F9-4A44-B05C-43527FAFD42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF01A182-B6F9-4A44-B05C-43527FAFD42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF01A182-B6F9-4A44-B05C-43527FAFD42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C13961-8395-48DB-A72E-D82FF9C52CE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C13961-8395-48DB-A72E-D82FF9C52CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C13961-8395-48DB-A72E-D82FF9C52CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C13961-8395-48DB-A72E-D82FF9C52CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DF0DAA-8CC1-4CA4-9EB3-7DAF4B916788}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DF0DAA-8CC1-4CA4-9EB3-7DAF4B916788}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DF0DAA-8CC1-4CA4-9EB3-7DAF4B916788}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DF0DAA-8CC1-4CA4-9EB3-7DAF4B916788}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF01A182-B6F9-4A44-B05C-43527FAFD42E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F6C13961-8395-48DB-A72E-D82FF9C52CE5} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{93DF0DAA-8CC1-4CA4-9EB3-7DAF4B916788} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAFD2F4F-9DD6-4280-8DE3-414BEB5261D3}
+	EndGlobalSection
+EndGlobal
